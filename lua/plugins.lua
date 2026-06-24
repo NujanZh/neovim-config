@@ -5,7 +5,7 @@ vim.pack.add({
 require("mason").setup({})
 
 vim.pack.add({
-    { src = "https://github.com/mcauley-penney/techbase.nvim" },
+    { src = "https://github.com/sainnhe/everforest" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
     { src = "https://github.com/cbochs/grapple.nvim" },
     { src = "https://github.com/stevearc/oil.nvim" },
@@ -13,7 +13,11 @@ vim.pack.add({
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
-require('techbase').setup({})
+vim.o.background = 'dark'
+vim.g.everforest_background = 'medium'
+vim.g.everforest_transparent_background = 2
+vim.g.everforest_float_style = 'blend'
+vim.cmd.colorscheme('everforest')
 
 local fzf = require('fzf-lua')
 fzf.setup({

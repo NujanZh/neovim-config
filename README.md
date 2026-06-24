@@ -21,7 +21,7 @@ Linux.
 - Makefile builds and compiler errors through `:make` and quickfix.
 - C/C++ debugging with nvim-dap and Mason-managed CodeLLDB.
 - Git hunk signs, navigation, preview, staging, and blame with Gitsigns.
-- A small colorscheme setup with no icon or font dependency.
+- Everforest dark/medium theme with terminal transparency and no font dependency.
 
 ## Configuration layout
 
@@ -56,6 +56,24 @@ BasedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 100
 ```
+
+## Theme and transparency
+
+Everforest uses its dark, medium-contrast palette. Transparent background level
+2 leaves the main editor and additional UI surfaces transparent, while Ghostty
+controls the actual terminal opacity and background image or colour.
+
+The relevant settings are in `lua/plugins.lua`:
+
+```lua
+vim.o.background = 'dark'
+vim.g.everforest_background = 'medium'
+vim.g.everforest_transparent_background = 2
+vim.g.everforest_float_style = 'blend'
+```
+
+If floating windows blend too much into the editor, change the transparency
+level to `1` or change the float style from `blend` to `bright`.
 
 ## Keymaps
 

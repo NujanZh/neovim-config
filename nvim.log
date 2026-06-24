@@ -2,3 +2,6 @@ WRN 2026-06-19T16:46:38.302 ?.5810     server_start:197: Failed to start server:
 WRN 2026-06-19T16:55:30.337 ?.6020     server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/Smoiq0/nvim.6020.0
 WRN 2026-06-19T17:02:02.881 ?.6104     server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/4fa0Yh/nvim.6104.0
 WRN 2026-06-19T17:52:31.763 ?.10672    server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/P84men/nvim.10672.0
+WRN 2026-06-19T21:28:32.635 ?.19339    server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/hwsvFS/nvim.19339.0
+WRN 2026-06-19T21:28:38.354 ?.19342    server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/EJGKDe/nvim.19342.0
+WRN 2026-06-19T21:28:42.322 ?.19346    server_start:197: Failed to start server: operation not permitted: /var/folders/xy/yt_66qnj7358_9tj0sq_hsdc0000gn/T/nvim.nur/Y39LCn/nvim.19346.0
