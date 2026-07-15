@@ -37,6 +37,5 @@ vim.opt.autoread = true
 
 -- Keymaps
 vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("n", "<leader>bb", "<cmd>make<CR>", { desc = "Build project" })
 vim.keymap.set("n", "<leader>bq", "<cmd>copen<CR>", { desc = "Open build errors" })
 vim.keymap.set("n", "<leader>bc", "<cmd>cclose<CR>", { desc = "Close build errors" })

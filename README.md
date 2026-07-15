@@ -15,6 +15,7 @@ Linux.
 - Native Neovim LSP and completion with Mason-managed clangd.
 - Diagnostics, semantic highlighting, symbol navigation, rename, and actions.
 - Project-specific formatting through `.clang-format`.
+- Two-space indentation for C/C++ buffers.
 - File and text search with fzf-lua, fzf, and ripgrep.
 - Persistent per-Git-project file bookmarks with Grapple.
 - Editable directory buffers with Oil.
@@ -48,14 +49,17 @@ Without compilation metadata, clangd guesses the command and may not know the
 correct standard, macros, or include paths.
 
 Formatting uses the nearest `.clang-format` found while searching toward the
-filesystem root. Without one, clang-format falls back to LLVM style. A minimal
-four-space project configuration is:
+filesystem root. Without one, clang-format falls back to LLVM style. For Google
+C++ style, use:
 
 ```yaml
-BasedOnStyle: LLVM
-IndentWidth: 4
+BasedOnStyle: Google
 ColumnLimit: 100
 ```
+
+Neovim also sets C/C++ buffers to two-space indentation while editing. This is
+separate from `.clang-format`; keep both at the same width if you want `grf` to
+preserve the indentation you typed.
 
 ## Theme and transparency
 
@@ -116,14 +120,13 @@ filesystem operations; `:write` reviews and applies them.
 
 | Mapping | Action |
 | --- | --- |
-| `Space b b` | Run `:make` from Neovim's working directory. |
 | `Space b q` | Open build errors in quickfix. |
 | `Space b c` | Close quickfix. |
 | `]q` / `[q` | Next / previous quickfix entry. |
 | `]Q` / `[Q` | Last / first quickfix entry. |
 
-Save source files before building. The default `makeprg` is `make`, and the
-project's Makefile owns targets and compiler flags.
+Builds are run explicitly from an external terminal. Neovim retains its
+quickfix controls for lists populated manually or by other commands.
 
 ### Debugging
 
